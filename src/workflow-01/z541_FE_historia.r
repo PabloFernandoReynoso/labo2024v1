@@ -323,10 +323,9 @@ CanaritosAsesinos <- function(
 
   campos_buenos <- setdiff(
     colnames(dataset),
-    campitos
+    c( campitos, "clase01")
   )
 
-  set.seed(canaritos_semilla, kind = "L'Ecuyer-CMRG")
   azar <- runif(nrow(dataset))
 
   dataset[, entrenamiento :=
